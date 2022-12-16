@@ -1,7 +1,7 @@
 [project]
 name = "coffee-roulette" 
 authors = [{name = "Zane Mitrevica", email= "zane.mitrevica@gmail.com"}]
-description = "Generates pseudo-random pairings"
+description = "Pseudo-random pair generator"
 readme = "README.md"
 requires-python = ">=3.8.0"
 dynamic = ["version"]
