@@ -55,7 +55,7 @@ jobs:
         run: pytest
 
   deploy:
-      needs: test.result == 'success'
+      needs: test
       runs-on: ubuntu-latest
       if: contains(github.ref, 'tags')
       steps:
