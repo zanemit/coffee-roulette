@@ -15,6 +15,15 @@ dependencies = [
     "ruamel.yaml",
 ]
 
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "setuptools_scm",
+    "flake8",
+    "black",
+    "pre-commit",
+]
+
 [build-system]
 requires = [
     "setuptools>=45",
@@ -23,3 +32,21 @@ requires = [
 ]
 build-backend = "setuptools.build_meta"
 [tool.setuptools_scm]
+
+[tool.black]
+target-version = ['py38', 'py39', 'py310']
+skip-string-normalization = false
+line-length = 79
+exclude = '''
+(
+  /(
+      \.eggs
+    | \.git
+    | \.hg
+    | \.mypy_cache
+    | _build
+    | build
+    | dist
+  )/
+)
+'''
