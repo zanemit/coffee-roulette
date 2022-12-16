@@ -21,6 +21,7 @@ def create_config_template():
         \n
     # Printing parameters
         name_prefix: 
+        meeting_purpose:
         \n    
     """
 

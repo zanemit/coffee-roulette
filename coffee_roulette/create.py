@@ -84,6 +84,7 @@ def create_coffee_roulette(
     cfg_file["roulette_times"] = [[9,12],[13,17]] # hours
     cfg_file["time_spacing"] = 30 # minutes
     cfg_file["name_prefix"] = '@' # for places with usernames (slack, discord, etc)
+    cfg_file["meeting_purpose"] = 'have coffee'
 
     cfg_path = roulette_dir / "config.yaml"
     utils.write_config(cfg_path, cfg_file)
