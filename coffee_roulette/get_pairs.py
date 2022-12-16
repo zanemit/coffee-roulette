@@ -15,7 +15,7 @@ def get_pairs(cfg_path,
     such that people can only be paired with those they have not been
     paired with before.
 
-    Prints the freshly generated coffee date pairs and, in case of an
+    Prints the freshly generated pairs and, in case of an
     odd number of participants, the name of the left-out person.
     
     PARAMETERS
@@ -85,7 +85,7 @@ def get_pairs(cfg_path,
                 i = np.delete(i,jds_to_remove)
                 j = np.delete(j,jds_to_remove)
             id = np.random.choice(len(i))
-            output_str = f"- @{crParticipantDict[i[id]][0]} will have coffee with @{crParticipantDict[j[id]][0]}"
+            output_str = f"- @{crParticipantDict[i[id]][0]} will {cfg["meeting_purpose"]} with @{crParticipantDict[j[id]][0]}"
             
             # generate a random meeting time
             if random_time:
