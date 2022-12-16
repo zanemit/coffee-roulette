@@ -29,7 +29,7 @@ def create_config_template():
     cfg_file = ruamelFile.load(yaml_str)
     return cfg_file, ruamelFile
 
-def read_config(cfg_path :str) -> dict:
+def read_config(cfg_path):
     """
     Reads the roulette config file
     """
@@ -42,7 +42,7 @@ def read_config(cfg_path :str) -> dict:
         raise FileNotFoundError("Config file not found!")
     return cfg
 
-def write_config(cfg_path :str, cfg :dict):
+def write_config(cfg_path, cfg):
     """
     Writes the roulette config file
     """
@@ -58,7 +58,7 @@ def edit_config(cfg_path, edits):
         cfg[key] = value
         #TBC
 
-def get_meeting_times(bounds :list, spacing :int) -> list:
+def get_meeting_times(bounds, spacing):
     """
     Generates a list of meeting times given time slot bounds
     and meeting spacings

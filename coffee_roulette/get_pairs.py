@@ -85,7 +85,7 @@ def get_pairs(cfg_path,
                 i = np.delete(i,jds_to_remove)
                 j = np.delete(j,jds_to_remove)
             id = np.random.choice(len(i))
-            output_str = f"- @{crParticipantDict[i[id]][0]} will {cfg["meeting_purpose"]} with @{crParticipantDict[j[id]][0]}"
+            output_str = f"- @{crParticipantDict[i[id]][0]} will {cfg['meeting_purpose']} with @{crParticipantDict[j[id]][0]}"
             
             # generate a random meeting time
             if random_time:
