@@ -75,13 +75,9 @@ def get_pairs(
             times = cfg["roulette_times"]
             spacing = cfg["time_spacing"]
 
-            t = (
-                dt.date.today()
-            )  # the day the code is run (Tuesday or Wednesday)
+            t = dt.date.today()  # the day the code is run
             start_date = t + dt.timedelta(days=1)
-            day_number = int(
-                7 * weeks
-            )  # days until the Tuesday before the next draw
+            day_number = int(7 * weeks)  # days until the next draw
 
             reasonable_times = utils.get_meeting_times(times, spacing)
 
