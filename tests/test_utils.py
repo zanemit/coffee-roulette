@@ -1,6 +1,5 @@
 from coffee_roulette import utils
 
-
 def test_get_meeting_times():
     import datetime as dt
 
@@ -17,3 +16,5 @@ def test_get_meeting_times():
         dt.timedelta(seconds=55200),
         dt.timedelta(seconds=58200),
     ]
+
+# %%
