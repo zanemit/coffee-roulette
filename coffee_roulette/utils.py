@@ -60,7 +60,7 @@ def edit_config(cfg_path, edits):
     cfg = read_config(cfg_path)
     for key, value in edits.items():
         cfg[key] = value
-        # TBC
+        # TODO
 
 
 def get_meeting_times(bounds, spacing):
@@ -84,7 +84,7 @@ def get_meeting_times(bounds, spacing):
         raise ValueError("Ill-defined bounds! Bounds must be a list of lists!")
 
     # check that bounds are integers
-    if not all(isinstance(x, np.int32) for b in bounds for x in b):
+    if not all(isinstance(x, (np.int32, int)) for b in bounds for x in b):
         raise ValueError(
             "Ill-defined bounds! Bounds must be defined by integers!"
         )
