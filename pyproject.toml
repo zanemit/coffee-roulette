@@ -12,6 +12,7 @@ dependencies = [
     "numpy",
     "pandas",
     "tabulate",
+    "types-tabulate",
     "ruamel.yaml",
 ]
 
