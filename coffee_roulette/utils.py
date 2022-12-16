@@ -84,10 +84,10 @@ def get_meeting_times(bounds, spacing):
         raise ValueError("Ill-defined bounds! Bounds must be a list of lists!")
 
     # check that bounds are integers
-    if not all(isinstance(x, (np.int32, int)) for b in bounds for x in b):
-        raise ValueError(
-            "Ill-defined bounds! Bounds must be defined by integers!"
-        )
+    # if not all(isinstance(x, (np.int32, int)) for b in bounds for x in b):
+    #     raise ValueError(
+    #         "Ill-defined bounds! Bounds must be defined by integers!"
+    #     )
 
     if not all(i < j for i, j in zip(bounds.flatten(), bounds.flatten()[1:])):
         raise ValueError(
